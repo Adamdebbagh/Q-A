@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
-  # get 'home/index'
   get '/about' => 'home#about'
-  post '/questions' => 'home#temp'
-  get '/questions/:id' => 'home#question'
+
   post '/answers' => 'home#temp'
 
   resources :questions
