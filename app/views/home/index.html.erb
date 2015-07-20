@@ -14,9 +14,9 @@
 
         <div class="media-body">
           <h4 class="media-heading"><%= q.email %> asked:</h4>
-          <span><%= time_ago_in_words(q.created_at) %> ago</span>
-          <p><%= q.description %></p>
-          <div>
+          <span class="hidden-xs"><%= time_ago_in_words(q.created_at) %> ago</span>
+          <p><%= truncate q.description, length:300 %></p>
+          <div class="hidden-xs">
             <a href="<%= question_path(q)%>" class="btn btn-success btn-xs">View Answers</a>
           </div>
         </div>
